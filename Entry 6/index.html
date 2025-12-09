@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kiwi the Koala</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <!-- Loading indicator -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Loading Kiwi...</p>
+    </div>
+
+    <!-- Error message (hidden by default) -->
+    <div id="error" style="display: none;">
+        <p>Failed to load 3D model. Please check:</p>
+        <ul>
+            <li>The kiwi.glb file is in the same folder</li>
+            <li>Your internet connection is working</li>
+            <li>Try refreshing the page</li>
+        </ul>
+    </div>
+
+    <model-viewer 
+        id="model"
+        src="kiwi.glb" 
+        camera-controls 
+        auto-rotate
+        shadow-intensity="0"
+        exposure="1.0"
+        camera-orbit="0deg 75deg 0.7m"
+        max-camera-orbit="auto auto 0.9m"
+        min-camera-orbit="auto auto 0.7m"
+        loading="eager"
+        reveal="auto">
+    </model-viewer>
+
+    <div id="button">
+        <a href="https://natalielau.8thwall.app/kiwi-the-koala/" target="_blank">
+            <img id="qr" src="qr-code.gif" alt="QR Code">
+        </a>  
+    </div>
+
+    <img id="curtain" src="curtain.png" alt="Overlay">
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+<script>
+    const modelViewer = document.querySelector('#model');
+    const loading = document.querySelector('#loading');
+    const error = document.querySelector('#error');
+
+    // Show loading indicator initially
+    loading.style.display = 'flex';
+
+    // When model loads successfully
+    modelViewer.addEventListener('load', () => {
+        console.log('Model loaded successfully!');
+        loading.style.display = 'none';
+    });
+
+    // When model fails to load
+    modelViewer.addEventListener('error', (event) => {
+        console.error('Model failed to load:', event);
+        loading.style.display = 'none';
+        error.style.display = 'block';
+    });
+
+    // Progress indicator (optional)
+    modelViewer.addEventListener('progress', (event) => {
+        const progress = event.detail.totalProgress;
+        console.log(`Loading progress: ${(progress * 100).toFixed(0)}%`);
+    });
+
+    // Timeout fallback - if model doesn't load in 15 seconds
+    setTimeout(() => {
+        if (loading.style.display !== 'none') {
+            console.error('Model loading timeout');
+            loading.style.display = 'none';
+            error.style.display = 'block';
+        }
+    }, 15000);
+</script>
+
+</body>
+</html>
