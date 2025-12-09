@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+        overflow-y: scroll; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#section1 {
+    height: 100vh;
+    background: #5b3a1e;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+}
+
+        #title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            position: relative;
+            z-index: 100;
+        }
+
+        .circle, .circle2 {
+            width: 700px;
+            height: 700px;
+            background-color: #d3b6d3;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 50;
+        }
+
+
+#section2 {
+    min-height: 40vh;
+    background: #d3b6d3;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100; 
+}
+
+        #blurb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh; 
+            position: relative;
+            z-index: 100;
+        }
+
+
+#section3 {
+    min-height: 600vh;
+    background: #5b3a1e;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: none; 
+    z-index: 99;
+}
+
+        #cursorShape {
+            width: 600px;
+            height: 600px;
+            background: #d3b6d3;
+            border-radius: 50%; 
+            position: fixed;
+            pointer-events: none;
+            transition: transform 0.15s ease-out;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 100;
+        }
+
+        #section3:hover #cursorShape {
+            opacity: 1;
+        }
+
+        #rabbit {
+            position: absolute; 
+            z-index: 250;
+            top: 300px; 
+            left: -100px;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s ease; /* Smooth fade in */
+        }
+
+        #rabbit:hover {
+            opacity: 1; /* Show on hover */
+        }
+
+        #dog {
+            position: absolute; 
+            z-index: 250;
+            top: 1300px; 
+            left: 700px;
+            transform: scaleX(-1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #dog:hover {
+            opacity: 1;
+        }
+
+        #elephant {
+            position: absolute; 
+            z-index: 250;
+            top: 2300px; 
+            left: 200px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #elephant:hover {
+            opacity: 1;
+        }
+
+        #moose {
+            position: absolute; 
+            z-index: 250;
+            top: 3300px; 
+            left: 700px;
+            transform: scaleX(-1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #moose:hover {
+            opacity: 1;
+        }
+
+        #bird {
+            position: absolute; 
+            z-index: 250;
+            top: 4300px; 
+            left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #bird:hover {
+            opacity: 1;
+        }
