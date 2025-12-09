@@ -1,0 +1,56 @@
+body {
+    background-image: url('BG 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: "cc-thismanthismonster-var", sans-serif;
+    font-variation-settings: "BITE" 0, "CHEW" 0, "WONK" 0;
+    font-size: 100px;
+    position: relative;
+    top: 350px;
+    left: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+/* ---------- EYES ---------- */
+
+.eye {
+    background-color: ghostwhite;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden; /* keep pupil inside */
+}
+
+/* Position your eyes on the page */
+#lefteye {
+    top: 240px;
+    left: 600px;
+}
+
+#righteye {
+    top: 260px;
+    left: 800px;
+}
+
+/* ---------- PUPILS ---------- */
+
+.pupil {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
