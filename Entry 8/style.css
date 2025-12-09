@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #52a5ce;
+}
+
+#unicorn {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+    z-index: 100;  
+}
+
+#unicorn:active {
+    cursor: grabbing;
+}
+
+#unicorn img{
+    width: 300px;
+}
+
+#rabbit {
+    position: fixed;
+    width: 150px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;  
+    left: 300px;
+    top: 550px;
+}
+
+#rabbit img {
+    width: 130px;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  
+    z-index: 10;  
+}
+
+#bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+#overlay {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%); 
+    bottom: 0; 
+    pointer-events: none; 
+    z-index: 2;  
+    animation: scrollUp 100s linear forwards;
+    animation-play-state: paused;  
+}
+
+#overlay img {
+    width: auto;  
+    height: auto; 
+    max-width: 750px; 
+    display: block;
+}
+
+@keyframes scrollUp {
+    from {
+        bottom: 0;
+        transform: translateX(-50%) translateY(72%);  
+    }
+    to {
+        bottom: 100%;
+        transform: translateX(-50%) translateY(0); 
+    }
+}
+
+
+
+
