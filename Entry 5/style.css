@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    margin: 0;
+    background-color: #efefef;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Dragon */
+#Valkee {
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    width: 800px;
+    transform: translateX(-50%); /* keeps it centered */
+    animation: floatUpDownValkee 2.5s ease-in-out infinite;
+}
+
+@keyframes floatUpDownValkee {
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-50px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Puppet Images */
+#kiwi,
+#king,
+#fingers,
+#anything,
+#unicorn,
+#shapeshifter {
+    position: fixed;
+    height: 200px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 50;
+}
+
+#kiwi:hover,
+#king:hover,
+#fingers:hover,
+#anything:hover,
+#unicorn:hover,
+#shapeshifter:hover {
+    transform: scale(1.02);
+}
+
+/* Puppet Positions */
+#kiwi { left: 18%; top: 35%; }
+#king { right: 15%; top: 60%; }
+#fingers { left: 5%; bottom: 18%; }
+#anything { right: 5%; bottom: 30%; }
+#unicorn { left: 25%; top: 65%; }
+#shapeshifter { right: 25%; top: 50%; }
+
+/* Floating animation for all puppets with varied speeds */
+#kiwi {
+    animation: floatUpDown 2.7s ease-in-out infinite;
+}
+
+#king {
+    animation: floatUpDown 3.1s ease-in-out infinite;
+}
+
+#fingers {
+    animation: floatUpDown 2.9s ease-in-out infinite;
+}
+
+#anything {
+    animation: floatUpDown 3.3s ease-in-out infinite;
+}
+
+#unicorn {
+    animation: floatUpDown 2.8s ease-in-out infinite;
+}
+
+#shapeshifter {
+    animation: floatUpDown 3.2s ease-in-out infinite;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal.active {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-right: 40px;
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.modal-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#sideImageContainer {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    justify-content: center;    
+    align-items: center;        
+    z-index: 1200;
+}
+
+#sideImageContainer img {
+    max-height: 500px;           
+    max-width: 500px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}

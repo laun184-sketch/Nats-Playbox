@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Puppet List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<div class="DragonFlying">
+    <img id="Valkee" src="valkee.png" alt="Valkee Dragon">
+</div>
+
+<!-- Puppet Images -->
+<img id="kiwi" src="kiwi.png" onclick="openModal('modal1', this.src)">
+<img id="king" src="king.png" onclick="openModal('modal2', this.src)">
+<img id="fingers" src="fingerfamily.png" onclick="openModal('modal3', this.src)">
+<img id="anything" src="smiski.png" onclick="openModal('modal4', this.src)">
+<img id="unicorn" src="unicorn.gif" onclick="openModal('modal5', this.src)">
+<img id="shapeshifter" src="shapeshifter.png" onclick="openModal('modal6', this.src)">
+
+
+<!-- Left-side enlarged image when modal opens -->
+<div id="sideImageContainer">
+    <img id="sideImage" src="">
+</div>
+
+<!-- Modal 1 -->
+<div id="modal1" class="modal" onclick="closeModal('modal1')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+        <h2>Kiwi Puppet</h2>
+        <p>Kiwi is the Playbox's sleepiest, snuggliest resident. A champion napper with a sixth sense for when someone needs a hug. Those drowsy eyes blink open the moment a visitor arrives, and two fuzzy arms reach out for a warm embrace. 
+</p>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal" onclick="closeModal('modal2')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+        <h2>King Puppet</h2>
+        <p>King McStache is the royal puppet of the Playbox, and Valkee the Puppet Keeper is his devoted guard pet. The two are almost never apart. Wherever the king goes, Valkee curls close behind, keeping a watchful eye with their button-bright gaze. As the oldest puppet in the box, his graying, mighty mustache gives him magical puppet charm…even if it tickles when he talks.
+</p>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal" onclick="closeModal('modal3')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+        <h2>Finger Family</h2>
+        <p>They like to interact.</p>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal" onclick="closeModal('modal4')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+        <h2>Anything Puppet</h2>
+        <p>They lead a group of like-minded individuals who also desire to be a puppet!</p>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div id="modal5" class="modal" onclick="closeModal('modal5')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+        <h2>Unicorn</h2>
+        <p>There are not a lot of kind-hearted beings like the unicorn.</p>
+    </div>
+</div>
+
+<!-- Modal 6 -->
+<div id="modal6" class="modal" onclick="closeModal('modal6')">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+        <h2>Shapeshifter</h2>
+        <p>The Shadow Shapeshifter is a mysterious puppet made from the silhouettes of many animals woven into one. In their normal form, they look like a swirling mix of creatures, but with a flicker of light, they can transform into any animal they wish. Their shifting form makes them both playful and unpredictable, but the other puppets know they always bring a touch of magic wherever they go.
+</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
