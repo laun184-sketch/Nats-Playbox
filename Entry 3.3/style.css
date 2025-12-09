@@ -1,0 +1,65 @@
+body {
+    background-image: url('BG 3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: "cc-thismanthismonster-var", sans-serif;
+    font-variation-settings: "BITE" 0, "CHEW" 0, "WONK" 0;
+    font-size: 100px;
+    position: relative;
+    top: 350px;
+    left: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+#lefteye {
+    background-color: ghostwhite;
+    width: 150px;
+    height: 150px;
+    position: absolute ;
+    top: 420px;
+    left: 600px;
+
+    border-radius: 50%;
+}
+
+#righteye {
+    background-color: ghostwhite;
+    width: 150px;
+    height: 150px;
+    position: absolute ;
+    top: 500px;
+    left: 800px;
+
+    border-radius: 50%;
+}
+
+#leftpupil {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    position: fixed ;
+    top: 440px;
+    left: 625px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+#rightpupil {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    position: fixed ;
+    top: 520px;
+    left: 825px;
+    z-index: 1;
+    border-radius: 50%;
+}
